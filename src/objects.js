@@ -11,8 +11,9 @@
 
 function returnObjectLiteral() {
   //your code here
-  return {
-    type: 'Goldfish',
+  
+  return{
+    type:  'Goldfish',
     brand: 'Pepperidge Farm',
     flavor: 'Cheddar',
     count: 2000
@@ -47,38 +48,40 @@ function returnObjectLiteral() {
 function MessageLog(user) {
     this.totalMessageSent = 0;
     this.totalMessageReceived = 0;
-    this.reveivedMessages = [];
-    this.sentMessages = [];
+    this.reveivedMessages = ['junk','junk','junk','junk','junk'];
+    this.sentMessages = ['junk','junk','junk','junk','junk'];
     //MESSAGE_LIMIT = 5;
     
-    logMessage: function(messageText, direction) {
-        if(direction == 0) {
-            this.totalSent +=1;
+    this.logMessage = function (messageText, direction) {
+        if(direction === 0) {
+            this.totalMessageSent += 1;
             var count = 3;
             while (count > 0) {
                 this.sentMessages[count+1] = this.sentMessages[count];
+                count -= 1;
             }
             this.sentMessages[0] = messageText;
         }
         
         if(direction == 1) {
-            this.totalReceived +=1;
-            var count = 3;
+            this.totalMessageReceived += 1;
+            count = 3;
             while (count > 0) {
-                this.receivedMessages[count+1] = this.receivedMessages[count];
+                this.reveivedMessages[count+1] = this.reveivedMessages[count];
+                count -= 1;
             }
             this.receivedMessages[0] = messageText;
         }
     }
     
-    getSentMessage: function(n) {
-        return this.sentMessage[n];   
+    this.getSentMessage = function(n) {
+        return this.sentMessages[n];   
     }
     
-    totalSent: function() {
+    this.totalSent = function() {
         return this.totalMessageSent;
     }
-    totalReveived: function() {
+    this.totalReveived = function() {
         return this.totalMessageReveived;   
     }
 }
