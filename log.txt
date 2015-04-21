@@ -1,1 +1,6 @@
 Start: Tue, 21 Apr 2015 12:44:32 -0800
+Wrote code for function.js about half an hour
+Debugged the code until it worked for about an hour
+End: Tue, 21 Apr 2015 14:44:20 -0800
+
+Start: Tue, 21 Apr 2015 15:30:55 -0800
