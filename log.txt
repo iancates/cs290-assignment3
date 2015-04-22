@@ -4,3 +4,13 @@ Debugged the code until it worked for about an hour
 End: Tue, 21 Apr 2015 14:44:20 -0800
 
 Start: Tue, 21 Apr 2015 15:30:55 -0800
+Wrote code for object.js
+Started debugging
+End: Tue, 21 Apr 2015 18:55:13 -0800
+
+
+Start: Tue, 21 Apr 2015 19:55:03 -0800
+finished debugging object.js
+Wrote code for variables.js
+debugged variables.js
+End: Tue, 21 Apr 2015 19:13:57 -0800

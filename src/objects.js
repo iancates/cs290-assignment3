@@ -48,15 +48,15 @@ function returnObjectLiteral() {
 function MessageLog(user) {
     this.totalMessageSent = 0;
     this.totalMessageReceived = 0;
-    this.reveivedMessages = ['junk','junk','junk','junk','junk'];
-    this.sentMessages = ['junk','junk','junk','junk','junk'];
+    this.receivedMessages = [];
+    this.sentMessages = [];
     //MESSAGE_LIMIT = 5;
     
     this.logMessage = function (messageText, direction) {
         if(direction === 0) {
             this.totalMessageSent += 1;
             var count = 3;
-            while (count > 0) {
+            while (count >= 0) {
                 this.sentMessages[count+1] = this.sentMessages[count];
                 count -= 1;
             }
@@ -66,8 +66,8 @@ function MessageLog(user) {
         if(direction == 1) {
             this.totalMessageReceived += 1;
             count = 3;
-            while (count > 0) {
-                this.reveivedMessages[count+1] = this.reveivedMessages[count];
+            while (count >= 0) {
+                this.receivedMessages[count+1] = this.receivedMessages[count];
                 count -= 1;
             }
             this.receivedMessages[0] = messageText;
@@ -81,8 +81,8 @@ function MessageLog(user) {
     this.totalSent = function() {
         return this.totalMessageSent;
     }
-    this.totalReveived = function() {
-        return this.totalMessageReveived;   
+    this.totalReceived = function() {
+        return this.totalMessageReceived;   
     }
 }
 //end your code
